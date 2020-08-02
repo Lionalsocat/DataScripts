@@ -1,1 +1,1 @@
-This folder used to save img.txt!
+This folder is used to saving img.txt file!

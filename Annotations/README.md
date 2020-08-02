@@ -1,1 +1,1 @@
-This folder used to save img.xml!
+This folder is used to saving img.xml file!
