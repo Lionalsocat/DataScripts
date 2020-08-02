@@ -56,7 +56,7 @@ for img in img_names:
     for img_each_label in img_all_label:
         spt = img_each_label.split(' ') 
         # 如果txt里面是以逗号‘，’隔开的，那么就改为spt = img_each_label.split(',')。
-        # spt中存储的是 {类别，x，y，w，h}
+        # spt中存储的是 {label，x，y，w，h}
             
         xml_file.write('    <object>\n')
         xml_file.write('        <name>'+classes[int(spt[0])]+'</name>\n')
