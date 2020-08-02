@@ -64,6 +64,6 @@ if __name__=='__main__':
 		image_id = file.split('.')[0]
 		convert_annotation(image_id)
 		
-	# 已生成的txt总数
+	# 已生成的txt总数 
 	txt_num = len([lists for lists in os.listdir(txt_path) if os.path.isfile(os.path.join(txt_path, lists))])
 	print(str(txt_num)+" flie is done!")
