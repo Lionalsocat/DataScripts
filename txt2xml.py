@@ -1,7 +1,3 @@
-#! /usr/bin/python
-# -*- coding:UTF-8 -*-
-# 上述为声明 编码形式为UTF-8
-
 import os, sys
 import glob
 from PIL import Image
