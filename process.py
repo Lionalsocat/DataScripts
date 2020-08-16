@@ -12,12 +12,9 @@ valid_percent = 0.2                         #验证集比例, 与train_percent�
 suffix='.jpg'                               #图片后缀名
 
 sets = ['train','valid']                    #输出结果集合
-labelfilepath = './labels'                  #labels存储路径
+labelfilepath = './labels'             #labels存储路径
 txtsavepath = './ImageSets'                 #输出的txt存储路径
 total_label = os.listdir(labelfilepath)
- 
-if not os.path.exists('ImageSets/'):
-    os.makedirs('ImageSets/')
  
 def StepOne():
     num = len(total_label)
@@ -25,7 +22,8 @@ def StepOne():
     train_num = int(num * train_percent)
     valid_num = int(num * valid_percent)
     train_list = random.sample(list, train_num)
-
+    if not os.path.exists('ImageSets/'):
+        os.makedirs('ImageSets/')
     ftrain = open('ImageSets/train.txt', 'w')
     fvalid = open('ImageSets/valid.txt', 'w')
 
@@ -40,8 +38,6 @@ def StepOne():
     fvalid.close()
 
 def StepTow():
-    if not os.path.exists('images/'):
-        os.makedirs('images/')
     for image_set in sets:
         image_ids = open('ImageSets/%s.txt' % (image_set)).read().strip().split()
         list_file = open('%s.txt' % (image_set), 'w')
